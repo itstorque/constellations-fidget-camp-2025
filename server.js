@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs').promises;
 const path = require('path');
+const crypto = require('crypto');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -32,6 +33,18 @@ loadData().then(data => {
 });
 
 app.get('/api/constellations/all', (req, res) => {
+    const allData = Object.entries(constellationData)
+        .filter(([id]) => !id.startsWith('deleted_'))
+        .map(([id, { name, myth, timestamp }]) => ({
+            id,
+            name,
+            myth,
+            timestamp
+        }));
+    res.json(allData);
+});
+
+app.get('/api/constellations/archive', (req, res) => {
     const allData = Object.entries(constellationData).map(([id, { name, myth, timestamp }]) => ({
         id,
         name,
@@ -52,11 +65,20 @@ app.get('/api/constellations/:id', (req, res) => {
 
 app.post('/api/constellations/:id', async (req, res) => {
     const id = req.params.id;
+
     if (parseInt(id, 10) % 2 === 0) {
         return res.status(400).json({ error: 'Constellation ID must be an odd number' });
     }
 
     const { name, myth } = req.body;
+
+    if (constellationData[id]) {
+        const adminPassword = req.headers['admin-password'];
+        if (adminPassword !== ADMIN_PASSWORD) {
+            return res.status(403).json({ error: 'Access denied: ID already exists' });
+        }
+    }
+
     if (name && myth) {
         constellationData[id] = {
             name,
@@ -79,9 +101,12 @@ app.delete('/api/constellations/:id', async (req, res) => {
 
     const id = req.params.id;
     if (constellationData[id]) {
+        const hash = crypto.createHash('sha256').update(JSON.stringify(constellationData[id])).digest('hex').slice(0, 8);
+        const deletedId = `deleted_${id}_${hash}`;
+        constellationData[deletedId] = { ...constellationData[id], id: deletedId };
         delete constellationData[id];
         await saveData(constellationData);
-        res.json({ success: true });
+        res.json({ success: true, newId: deletedId });
     } else {
         res.status(404).json({ error: 'Constellation not found' });
     }

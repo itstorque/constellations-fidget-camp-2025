@@ -46,6 +46,10 @@
     <div id="constellation-list"></div>
     <button id="delete-all" class="delete-button">Delete All Constellations</button>
 
+    <h2>Archive</h2>
+    <div id="archive-list"></div>
+    <button id="export-json">Export JSON</button>
+
     <script>
         const adminPassword = prompt("Enter admin password:");
         const accessDeniedBanner = document.getElementById('access-denied');
@@ -90,6 +94,7 @@
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
+                            'admin-password': adminPassword,
                         },
                         body: JSON.stringify({ name: updatedName, myth: updatedMyth }),
                     });
@@ -111,11 +116,50 @@
                     loadConstellations();
                 };
 
+                const idLabel = document.createElement('small');
+                idLabel.textContent = `ID: ${id}`;
+                idLabel.style.display = 'inline-block';
+                idLabel.style.textAlign = 'right';
+
                 constellationDiv.appendChild(nameInput);
                 constellationDiv.appendChild(mythInput);
                 constellationDiv.appendChild(saveButton);
                 constellationDiv.appendChild(deleteButton);
+                constellationDiv.appendChild(idLabel);
                 constellationListDiv.appendChild(constellationDiv);
+            }
+        }
+
+        async function loadArchive() {
+            const response = await fetch('/api/constellations/archive');
+            const constellations = await response.json();
+            const archiveListDiv = document.getElementById('archive-list');
+            archiveListDiv.innerHTML = '';
+
+            for (const { id, name, myth, timestamp } of constellations) {
+                const archiveDiv = document.createElement('div');
+                archiveDiv.className = 'constellation';
+
+                const idSpan = document.createElement('span');
+                idSpan.textContent = `ID: ${id}`;
+
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = `Name: ${name}`;
+
+                const mythSpan = document.createElement('span');
+                mythSpan.textContent = `Myth: ${myth}`;
+
+                const timestampSpan = document.createElement('span');
+                timestampSpan.textContent = `Timestamp: ${timestamp}`;
+
+                archiveDiv.appendChild(idSpan);
+                archiveDiv.appendChild(document.createElement('br'));
+                archiveDiv.appendChild(nameSpan);
+                archiveDiv.appendChild(document.createElement('br'));
+                archiveDiv.appendChild(mythSpan);
+                archiveDiv.appendChild(document.createElement('br'));
+                archiveDiv.appendChild(timestampSpan);
+                archiveListDiv.appendChild(archiveDiv);
             }
         }
 
@@ -134,13 +178,28 @@
             loadConstellations();
         };
 
+        document.getElementById('export-json').onclick = async () => {
+            const response = await fetch('/api/constellations/archive');
+            const constellations = await response.json();
+            const blob = new Blob([JSON.stringify(constellations, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'constellations.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        };
+
         validatePassword().then(isValid => {
             if (isValid) {
                 loadConstellations();
+                loadArchive();
             } else {
                 accessDeniedBanner.style.display = 'block';
                 document.getElementById('constellation-list').style.display = 'none';
                 document.getElementById('delete-all').style.display = 'none';
+                document.getElementById('archive-list').style.display = 'none';
+                document.getElementById('export-json').style.display = 'none';
             }
         });
     </script>
