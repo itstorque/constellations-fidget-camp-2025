@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Constellation Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .constellation {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .constellation input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .delete-button {
+            background-color: #f44336;
+        }
+        #access-denied {
+            color: red;
+            font-weight: bold;
+            display: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin - Constellation Management</h1>
+    <div id="access-denied">Access Denied: Incorrect Password</div>
+    <div id="constellation-list"></div>
+    <button id="delete-all" class="delete-button">Delete All Constellations</button>
+
+    <script>
+        const adminPassword = prompt("Enter admin password:");
+        const accessDeniedBanner = document.getElementById('access-denied');
+
+        async function validatePassword() {
+            const response = await fetch('/api/validate-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ password: adminPassword }),
+            });
+            return response.ok;
+        }
+
+        async function loadConstellations() {
+            const response = await fetch('/api/constellations/all');
+            const constellations = await response.json();
+            const constellationListDiv = document.getElementById('constellation-list');
+            constellationListDiv.innerHTML = '';
+
+            for (const { id, name, myth } of constellations) {
+                const constellationDiv = document.createElement('div');
+                constellationDiv.className = 'constellation';
+
+                const nameInput = document.createElement('input');
+                nameInput.type = 'text';
+                nameInput.value = name;
+                nameInput.placeholder = 'Name';
+
+                const mythInput = document.createElement('input');
+                mythInput.type = 'text';
+                mythInput.value = myth;
+                mythInput.placeholder = 'Myth';
+
+                const saveButton = document.createElement('button');
+                saveButton.textContent = 'Save';
+                saveButton.onclick = async () => {
+                    const updatedName = nameInput.value;
+                    const updatedMyth = mythInput.value;
+                    await fetch(`/api/constellations/${id}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name: updatedName, myth: updatedMyth }),
+                    });
+                    alert('Constellation updated!');
+                    loadConstellations();
+                };
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.className = 'delete-button';
+                deleteButton.onclick = async () => {
+                    await fetch(`/api/constellations/${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'admin-password': adminPassword,
+                        },
+                    });
+                    alert('Constellation deleted!');
+                    loadConstellations();
+                };
+
+                constellationDiv.appendChild(nameInput);
+                constellationDiv.appendChild(mythInput);
+                constellationDiv.appendChild(saveButton);
+                constellationDiv.appendChild(deleteButton);
+                constellationListDiv.appendChild(constellationDiv);
+            }
+        }
+
+        document.getElementById('delete-all').onclick = async () => {
+            const response = await fetch('/api/constellations/all');
+            const constellations = await response.json();
+            for (const { id } of constellations) {
+                await fetch(`/api/constellations/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'admin-password': adminPassword,
+                    },
+                });
+            }
+            alert('All constellations deleted!');
+            loadConstellations();
+        };
+
+        validatePassword().then(isValid => {
+            if (isValid) {
+                loadConstellations();
+            } else {
+                accessDeniedBanner.style.display = 'block';
+                document.getElementById('constellation-list').style.display = 'none';
+                document.getElementById('delete-all').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1, label {
+            color: #CCFF33; /* #FFD700; /* Gold color for headings and labels */
+        }
+        #constellation-name, #constellation-myth, #latest-details {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #latest-details {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        textarea {
+            width: 80%;
+            margin-bottom: 10px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #CCFF33;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b4dd38; /* Orange hover effect */
+        }
+        #create-banner {
+            color: #CCFF33;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        #constellation-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            textarea {
+                font-size: 1em;
+            }
+            button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <h1>Constellation Tracker</h1>
+    <div id="create-banner">Create Your Constellation</div>
+    <div id="constellation-name" style="display: none;"></div>
+    <div id="constellation-myth" style="display: none;"></div>
+    <div id="latest-details" style="display: none;"></div>
+    <div id="input-fields" style="display: none; max-width: 60ch; width: 80vw; margin: 0 auto; text-align: left;">
+        <label for="new-name" style="display: block; margin-bottom: 10px;">Name of your constellation:</label>
+        <textarea id="new-name" placeholder="Enter the name" style="display: block; width: 90%;"></textarea>
+        <br/><br/>
+        <label for="new-myth" style="display: block; margin-bottom: 10px;">Myth of your constellation:</label>
+        <textarea id="new-myth" placeholder="Enter the myth" style="display: block; width: 90%;"></textarea>
+        <div style="text-align: right; margin-top: 20px;">
+            <button onclick="submitDetails()">Submit Details</button>
+        </div>
+    </div>
+    </div>
+    <div id="constellation-list" style="display: none;"></div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                    polygon: {
+                        nb_sides: 5
+                    },
+                    image: {
+                        src: "img/github.svg",
+                        width: 100,
+                        height: 100
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 0,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 0,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 0,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: false,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 400,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    },
+                    remove: {
+                        particles_nb: 2
+                    }
+                }
+            },
+            retina_detect: true
+        });
+
+        async function loadConstellations() {
+            const response = await fetch('/api/constellations/all');
+            const constellations = await response.json();
+            const constellationListDiv = document.getElementById('constellation-list');
+            constellationListDiv.style.display = 'block';
+            constellationListDiv.innerHTML = '';
+
+            for (const { id, name } of constellations) {
+                const constellationLink = document.createElement('a');
+                constellationLink.href = `?constellationId=${id}`;
+                constellationLink.textContent = name;
+                constellationLink.style.display = 'block';
+                constellationLink.style.color = '#CCFF33';
+                constellationLink.style.padding = '10px 20px'; /* Add vertical padding */
+                constellationLink.style.margin = '5px 0'; /* Add spacing between links */
+                constellationLink.style.textDecoration = 'none'; /* Remove underline for better tap area */
+                constellationLink.style.borderRadius = '5px'; /* Add rounded corners */
+                constellationLink.style.backgroundColor = 'rgba(204, 255, 51, 0.1)'; /* Slight background for tap area */
+                constellationLink.style.cursor = 'pointer'; /* Change cursor to pointer */
+                constellationListDiv.appendChild(constellationLink);
+            }
+        }
+
+        async function loadConstellation() {
+            const constellationId = new URLSearchParams(window.location.search).get('constellationId');
+            if (!constellationId) {
+                loadConstellations();
+                return;
+            }
+
+            const response = await fetch(`/api/constellations/${constellationId}`);
+            if (response.status === 404) {
+                document.getElementById('create-banner').style.display = 'block';
+                document.getElementById('input-fields').style.display = 'block';
+                return;
+            }
+
+            const data = await response.json();
+            document.getElementById('create-banner').style.display = 'none';
+            document.getElementById('constellation-name').style.display = 'block';
+            document.getElementById('constellation-myth').style.display = 'block';
+            document.getElementById('latest-details').style.display = 'block';
+            document.getElementById('constellation-name').textContent = `Name: ${data.name}`;
+            document.getElementById('constellation-myth').textContent = `Myth: ${data.myth}`;
+            document.getElementById('latest-details').textContent = `Last updated: ${new Date(data.timestamp).toLocaleString()}`;
+        }
+
+        async function submitDetails() {
+            const constellationId = new URLSearchParams(window.location.search).get('constellationId');
+            const newName = document.getElementById('new-name').value;
+            const newMyth = document.getElementById('new-myth').value;
+            if (newName && newMyth) {
+                const response = await fetch(`/api/constellations/${constellationId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name: newName, myth: newMyth }),
+                });
+                if (response.ok) {
+                    document.getElementById('new-name').value = '';
+                    document.getElementById('new-myth').value = '';
+                    loadConstellation();
+                }
+            }
+        }
+
+        loadConstellation();
+    </script>
+</body>
+</html>
