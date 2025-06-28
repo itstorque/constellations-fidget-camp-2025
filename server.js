@@ -5,7 +5,8 @@ const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
-const DATA_FILE = path.join(__dirname, 'constellation_data.json');
+const DEPLOYED = process.env.DEPLOYED; // Check if deployed
+const DATA_FILE = DEPLOYED ? '/var/data/constellation_data.json' : path.join(__dirname, 'constellation_data.json');
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD; // Secret password for admin mode
 
 app.use(bodyParser.json());
@@ -98,4 +99,5 @@ app.post('/api/validate-password', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
+    console.log(`Using data file: ${DATA_FILE}`);
 });
