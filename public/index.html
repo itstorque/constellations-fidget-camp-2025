@@ -28,8 +28,14 @@
             margin-bottom: 20px;
             text-align: center;
         }
+        #constellation-name {
+            font-size: 2em;
+            padding-bottom: 0.5em;
+            color: #CCFF33;
+        }
         #latest-details {
             padding: 10px;
+            margin-top: 20px;
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
         }
@@ -85,9 +91,9 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <h1>Constellation Tracker</h1>
+    <h1 id="tracker-title">Constellation Tracker</h1>
     <div id="create-banner">Create Your Constellation</div>
-    <div id="constellation-name" style="display: none;"></div>
+    <div id="constellation-name" style="display: none; font-size: 2em; color: #CCFF33;"></div>
     <div id="constellation-myth" style="display: none;"></div>
     <div id="latest-details" style="display: none;"></div>
     <div id="input-fields" style="display: none; max-width: 60ch; width: 80vw; margin: 0 auto; text-align: left;">
@@ -242,9 +248,11 @@
         async function loadConstellation() {
             const constellationId = new URLSearchParams(window.location.search).get('constellationId');
             if (!constellationId) {
+                document.getElementById('tracker-title').style.display = 'block';
                 loadConstellations();
                 return;
             }
+            document.getElementById('tracker-title').style.display = 'none';
 
             const response = await fetch(`/api/constellations/${constellationId}`);
             if (response.status === 404) {
@@ -258,7 +266,7 @@
             document.getElementById('constellation-name').style.display = 'block';
             document.getElementById('constellation-myth').style.display = 'block';
             document.getElementById('latest-details').style.display = 'block';
-            document.getElementById('constellation-name').textContent = `Name: ${data.name}`;
+            document.getElementById('constellation-name').textContent = data.name;
             document.getElementById('constellation-myth').textContent = `Myth: ${data.myth}`;
             document.getElementById('latest-details').textContent = `Last updated: ${new Date(data.timestamp).toLocaleString()}`;
         }
