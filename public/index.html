@@ -34,6 +34,23 @@
             padding-bottom: 0.5em;
             color: #CCFF33;
         }
+        #constellation-myth {
+            display: none;
+            max-height: 30vh; /* Limit height to 30% of the viewport */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 10px; /* Add padding for better readability */
+            scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+        }
+        #constellation-myth::-webkit-scrollbar {
+            width: 8px; /* Width of vertical scrollbar */
+        }
+        #constellation-myth::-webkit-scrollbar-thumb {
+            background-color: #CCFF33; /* Scrollbar thumb color */
+            border-radius: 5px; /* Rounded corners for scrollbar thumb */
+        }
+        #constellation-myth::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.1); /* Scrollbar track color */
+        }
         #latest-details {
             padding: 10px;
             margin-top: 20px;
@@ -78,6 +95,7 @@
             padding: 10px; /* Add padding for better spacing */
             scrollbar-width: thin; /* Thin scrollbar for modern browsers */
             max-width: 80ch;
+            padding-bottom: 3em; 
         }
         #constellation-list::-webkit-scrollbar {
             width: 8px; /* Width of vertical scrollbar */
@@ -126,7 +144,7 @@
     <h1 id="tracker-title">Constellation Tracker</h1>
     <div id="create-banner">Create Your Constellation</div>
     <div id="constellation-name" style="display: none; font-size: 2em; color: #CCFF33;"></div>
-    <div id="constellation-myth" style="display: none;"></div>
+    <div id="constellation-myth"></div>
     <div id="latest-details" style="display: none;"></div>
     <div id="input-fields" style="display: none; max-width: 60ch; width: 80vw; margin: 0 auto; text-align: left;">
         <label for="new-name" style="display: block; margin-bottom: 10px;">Name of your constellation:</label>
