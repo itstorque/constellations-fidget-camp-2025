@@ -27,6 +27,7 @@
             font-weight: bold;
             margin-bottom: 20px;
             text-align: center;
+            max-width: 60ch; 
         }
         #constellation-name {
             font-size: 2em;
@@ -69,6 +70,37 @@
         #constellation-list {
             margin-top: 20px;
             text-align: center;
+            display: flex; /* Use flex layout */
+            flex-wrap: wrap; /* Allow wrapping */
+            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-x: hidden; /* Disable horizontal scrolling */
+            /* max-height: 50vh; Limit height to half the viewport */
+            padding: 10px; /* Add padding for better spacing */
+            scrollbar-width: thin; /* Thin scrollbar for modern browsers */
+            max-width: 80ch;
+        }
+        #constellation-list::-webkit-scrollbar {
+            width: 8px; /* Width of vertical scrollbar */
+        }
+        #constellation-list::-webkit-scrollbar-thumb {
+            background-color: #CCFF33; /* Scrollbar thumb color */
+            border-radius: 5px; /* Rounded corners for scrollbar thumb */
+        }
+        #constellation-list::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.1); /* Scrollbar track color */
+        }
+        #constellation-list a {
+            display: inline-block; /* Ensure links are inline-block for wrapping */
+            margin: 10px; /* Add spacing between links */
+            color: #CCFF33;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: rgba(204, 255, 51, 0.1);
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        #constellation-list a:hover {
+            background-color: rgba(204, 255, 51, 0.2); /* Slightly darker hover effect */
         }
         #particles-js {
             position: absolute;
@@ -233,14 +265,14 @@
                 const constellationLink = document.createElement('a');
                 constellationLink.href = `?constellationId=${id}`;
                 constellationLink.textContent = name;
-                constellationLink.style.display = 'block';
+                constellationLink.style.display = 'inline-block';
+                constellationLink.style.margin = '0.4em 0.4em';
                 constellationLink.style.color = '#CCFF33';
-                constellationLink.style.padding = '10px 20px'; /* Add vertical padding */
-                constellationLink.style.margin = '5px 0'; /* Add spacing between links */
-                constellationLink.style.textDecoration = 'none'; /* Remove underline for better tap area */
-                constellationLink.style.borderRadius = '5px'; /* Add rounded corners */
-                constellationLink.style.backgroundColor = 'rgba(204, 255, 51, 0.1)'; /* Slight background for tap area */
-                constellationLink.style.cursor = 'pointer'; /* Change cursor to pointer */
+                constellationLink.style.textDecoration = 'none';
+                constellationLink.style.borderRadius = '5px';
+                constellationLink.style.backgroundColor = 'rgba(204, 255, 51, 0.1)';
+                constellationLink.style.padding = '10px 20px';
+                constellationLink.style.cursor = 'pointer';
                 constellationListDiv.appendChild(constellationLink);
             }
         }
