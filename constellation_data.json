@@ -1,12 +1,674 @@
-{
-  "1": {
-    "name": "Orion",
-    "myth": "A hunter in Greek mythology.",
-    "timestamp": "2025-06-28T08:02:18.004Z"
+[
+  {
+    "id": "1",
+    "name": "Crabcake",
+    "myth": "once there was a crab. I killed it. Now it is a crab cake. Its soul lives forever in the sky.",
+    "timestamp": "2025-06-28T18:02:29.071Z"
   },
-  "2": {
-    "name": "Cassiopeia",
-    "myth": "A queen in Greek mythology.",
-    "timestamp": "2025-06-28T08:02:55.662Z"
+  {
+    "id": "3",
+    "name": "Carlfogius",
+    "myth": "Once upon a time, the sun shone too strong. The god of the mist sent Carlfogius to wrestle with the sun’s rays and deliver curtains of dimnesss and droplets of mist to mortals across the realm now known as San Francisco.",
+    "timestamp": "2025-06-28T19:02:23.644Z"
+  },
+  {
+    "id": "5",
+    "name": "Virgo",
+    "myth": "She came, she saw, she ate.",
+    "timestamp": "2025-06-29T22:05:35.476Z"
+  },
+  {
+    "id": "7",
+    "name": "40 year old virgo",
+    "myth": "still a population 3 star",
+    "timestamp": "2025-06-28T23:52:00.941Z"
+  },
+  {
+    "id": "9",
+    "name": "Croissant",
+    "myth": "On nights when I am visible, if you go brave the long lines at Arsicault the next morning, you will meet someone of importance in your life there.",
+    "timestamp": "2025-06-28T23:30:47.394Z"
+  },
+  {
+    "id": "11",
+    "name": "The dove",
+    "myth": "It’s a very cute dove! ",
+    "timestamp": "2025-06-28T22:51:03.742Z"
+  },
+  {
+    "id": "13",
+    "name": "Bananas",
+    "myth": "They all went bananas for this constellation. All of them. Gone. The banana plague hit us in the 50s and ever since, this has been the only banana in the sky.",
+    "timestamp": "2025-06-28T23:22:17.176Z"
+  },
+  {
+    "id": "15",
+    "name": "Big boi ",
+    "myth": "I will fall out of the sky to crush the earth and turn you all to dust. ",
+    "timestamp": "2025-06-29T22:36:53.097Z"
+  },
+  {
+    "id": "17",
+    "name": "Gumdrop Girly Pop",
+    "myth": "Once upon a time, a little girl lost her tooth and filled it with a gumdrop. She died of gingivitis and these stars are in her memory. ",
+    "timestamp": "2025-06-28T23:47:46.009Z"
+  },
+  {
+    "id": "21",
+    "name": "Calder",
+    "myth": "Golden baby lion",
+    "timestamp": "2025-06-29T23:55:58.361Z"
+  },
+  {
+    "id": "23",
+    "name": "Cleric",
+    "myth": "At the tip of its staff is the Guiding Star. It is said that in the time of their greatest need, one may follow it and be guided to the object of their search. The righteous may follow it on the pursuit of justice. The lost may follow it until they are found. But should the wicked seek a path to further wickedness by its light, the star is said to direct them to repentance, redemption...or peril.",
+    "timestamp": "2025-06-29T00:29:55.328Z"
+  },
+  {
+    "id": "25",
+    "name": "Celeste",
+    "myth": "The girl who climbed the mountain",
+    "timestamp": "2025-06-29T23:41:02.296Z"
+  },
+  {
+    "id": "27",
+    "name": "Poopi Major",
+    "myth": "is poop. Major",
+    "timestamp": "2025-06-29T23:09:21.384Z"
+  },
+  {
+    "id": "29",
+    "name": "The Parrot",
+    "myth": "The king of Olympus was once trapped in a well, and he was able to send for help by having a parrot repeat his words and fly off, and in return he made the parrot into an eternal celestial body",
+    "timestamp": "2025-06-29T22:52:57.481Z"
+  },
+  {
+    "id": "31",
+    "name": "gay horse",
+    "myth": "the gayest horse that ever horse around ",
+    "timestamp": "2025-06-28T22:17:55.739Z"
+  },
+  {
+    "id": "33",
+    "name": "apple pie",
+    "myth": "pie that sucks",
+    "timestamp": "2025-06-30T00:56:24.197Z"
+  },
+  {
+    "id": "35",
+    "name": "Oh Ryan ",
+    "myth": "Ryan was a giant and a mighty Greek hunter, some say he was like Orion,  for whom myths say he’s the son of Poseidon (god of the sea), which gives him the ability to walk on water. But Ryan was clumsy and fell in the sea. ",
+    "timestamp": "2025-06-29T22:16:14.833Z"
+  },
+  {
+    "id": "37",
+    "name": "scenn",
+    "myth": "A marina boy started dating a burner girl 😳😳😳",
+    "timestamp": "2025-06-29T23:04:38.480Z"
+  },
+  {
+    "id": "39",
+    "name": "Bigfoot",
+    "myth": "Everyone has a set of small feet except for me so I’m a weirdo",
+    "timestamp": "2025-06-29T23:22:57.296Z"
+  },
+  {
+    "id": "41",
+    "name": "You from 17492 light years away ",
+    "myth": "You heart is about to stop beating so eat as many McDonald as you can while u last",
+    "timestamp": "2025-06-29T23:26:27.011Z"
+  },
+  {
+    "id": "43",
+    "name": "Burger",
+    "myth": "A remnant of the last battle between the armies of bread and beef ",
+    "timestamp": "2025-06-29T23:36:38.016Z"
+  },
+  {
+    "id": "45",
+    "name": "Tuna tartargic",
+    "myth": "Tunas used to roam the lands in addition to the seas but one day the birds  decided they wanted to have all of the land so they banished all the tunas to just the oceans. The gods felt bad so they added tuna tartargic to mark this tragic event",
+    "timestamp": "2025-06-28T23:30:28.501Z"
+  },
+  {
+    "id": "47",
+    "name": "Cumquat",
+    "myth": "I’ve upon a time, I had a cumquat tree",
+    "timestamp": "2025-06-30T00:57:49.785Z"
+  },
+  {
+    "id": "49",
+    "name": "The Uvula Bell",
+    "myth": "In the time before time \nWhen the future vocalized the past\nThe triangle shape hung from the sky \nWith an uvula in the middle\nVibrating out The voice that echoed creation\nAnd consuming all the wayward atoms \nBringing order and balance to a new creation\nCalled time ",
+    "timestamp": "2025-06-29T23:13:13.384Z"
+  },
+  {
+    "id": "51",
+    "name": " Business Tie",
+    "myth": "Mergers and acquisitions haunt you at night",
+    "timestamp": "2025-06-29T23:54:08.883Z"
+  },
+  {
+    "id": "53",
+    "name": "MacKenzie ",
+    "myth": "Will become president ",
+    "timestamp": "2025-06-29T22:43:43.683Z"
+  },
+  {
+    "id": "57",
+    "name": "hiker’s reprieve",
+    "myth": "gaze at the entrance of hiker’s reprieve, a tent that is known to appears to lost campers who tread under its light",
+    "timestamp": "2025-06-29T22:22:58.039Z"
+  },
+  {
+    "id": "59",
+    "name": "Treesh",
+    "myth": "Long ago there was a tree named Sh. She was powerful and very quiet but she was so quiet no one could hear her name and she was always telling people to be quiet so they called her treesh and then she got cut down and her ashes blew into the sky and got stuck and now they sparkle the end ",
+    "timestamp": "2025-06-29T22:23:02.666Z"
+  },
+  {
+    "id": "61",
+    "name": "event horizon | the great line",
+    "myth": "splitting the sky and all the people and animals and planets, the great line weaves together many constellations in our favorite hemisphere. ",
+    "timestamp": "2025-06-29T23:53:53.232Z"
+  },
+  {
+    "id": "63",
+    "name": "sacrificial dunce hat",
+    "myth": "every 3 moons if the dunce is found they are given to the stars",
+    "timestamp": "2025-06-29T23:27:41.203Z"
+  },
+  {
+    "id": "65",
+    "name": "Flying Arrow",
+    "myth": "When you’re lost in life, look to the flying arrow for guidance. It can’t help you find your way on a map, but might help you find your way in life. ",
+    "timestamp": "2025-06-28T23:28:28.354Z"
+  },
+  {
+    "id": "67",
+    "name": "Potato Pooper",
+    "myth": "Potato poops",
+    "timestamp": "2025-06-29T22:50:02.575Z"
+  },
+  {
+    "id": "69",
+    "name": "The giant chicken",
+    "myth": "The giant mythical chicken appears once a year in the middle of summer. It has never been photographed but legend has it that the first person to see it will be given magical chicken abilities.",
+    "timestamp": "2025-06-29T23:49:01.857Z"
+  },
+  {
+    "id": "71",
+    "name": "Sid",
+    "myth": "This constellation did yard work all day.",
+    "timestamp": "2025-06-29T23:37:44.638Z"
+  },
+  {
+    "id": "73",
+    "name": "The Triangle",
+    "myth": "The triangle is the most perfect of shapes. Minimalistic, 3 sided, pure, simple, easy. Good things come in threes: three vertices and three sides. An inside, and an outside. Nothing more, nothing less.",
+    "timestamp": "2025-06-29T23:28:54.718Z"
+  },
+  {
+    "id": "75",
+    "name": "Uniboob",
+    "myth": "The boob from which all other boobs descended",
+    "timestamp": "2025-06-29T23:15:54.177Z"
+  },
+  {
+    "id": "77",
+    "name": "The Greasy Chicken ",
+    "myth": "One day, a KFC restaurant was getting many complaints from customers about their chicken. It was not greasy enough! So, Colonel Sanders put an insane amount of grease on a chicken. Then, the grease caught fire and the poor chicken got blasted into space, where it would live forever in the stars.",
+    "timestamp": "2025-06-29T23:36:19.992Z"
+  },
+  {
+    "id": "81",
+    "name": "ratatouille ",
+    "myth": "mama mia it’s ratatoue!!!!!",
+    "timestamp": "2025-06-29T23:02:41.388Z"
+  },
+  {
+    "id": "85",
+    "name": "Biccus",
+    "myth": "Biccus is a pen",
+    "timestamp": "2025-06-30T00:52:34.217Z"
+  },
+  {
+    "id": "87",
+    "name": "The Kazoo ",
+    "myth": "It puts the Cyclops at ease. ",
+    "timestamp": "2025-06-29T23:32:52.866Z"
+  },
+  {
+    "id": "91",
+    "name": "Lunerus ",
+    "myth": "Luneras was a brave dragon dog who loves to chase and be chased",
+    "timestamp": "2025-06-29T23:47:29.382Z"
+  },
+  {
+    "id": "93",
+    "name": "Zig",
+    "myth": "The great zig is a winding path created by creatures endlessly more powerful and capable than us but they occasionally still take wrong turns",
+    "timestamp": "2025-06-29T22:09:47.661Z"
+  },
+  {
+    "id": "95",
+    "name": "Rizzy",
+    "myth": "Rizzy the rainbow snake emerged into the meadows of the world when all flowers were green. With her iridescent slither each flower differentiated into a prismatic slice of unique color and light, and the resplendent diversity of the world came into being.",
+    "timestamp": "2025-06-30T00:31:41.122Z"
+  },
+  {
+    "id": "97",
+    "name": "Snorkel",
+    "myth": "The gods refused humankind access to the sea. However horseus designed a way to breath in the sea despite the God’s storms of wrath. They are forever remembered in the stars. ✨ ",
+    "timestamp": "2025-06-29T22:50:48.929Z"
+  },
+  {
+    "id": "99",
+    "name": "EmiLu",
+    "myth": "Brings beautiful celestial bodies in collision ",
+    "timestamp": "2025-06-30T00:59:35.257Z"
+  },
+  {
+    "id": "101",
+    "name": "Constellito and meatballs ",
+    "myth": "Come for the spaghetti stay for the farts ",
+    "timestamp": "2025-06-30T00:54:58.923Z"
+  },
+  {
+    "id": "107",
+    "name": "Neuromonstera",
+    "myth": "One day two people were just looking around the room. Their creativity was put to the test, and they hybradized Swiss cheese and brain art. How did we do?",
+    "timestamp": "2025-06-30T00:05:35.521Z"
+  },
+  {
+    "id": "111",
+    "name": "Titty titty bang bang",
+    "myth": "When the Big bang happened, many titties were made like millions and then they were thrown into the sky. The titties multiplied further in the sky. And then they exploded and turned into stars",
+    "timestamp": "2025-06-29T00:33:50.777Z"
+  },
+  {
+    "id": "113",
+    "name": "Preying Manticus",
+    "myth": "There was once a praying mantis. After an earthquake, he became stuck in the worldwide crevice. Every night, he sings to those he can hear.",
+    "timestamp": "2025-06-30T00:30:18.327Z"
+  },
+  {
+    "id": "115",
+    "name": "Lum",
+    "myth": "She sparkles on high\nA star goddess from nature\nFeel her warm soul shine\n",
+    "timestamp": "2025-06-29T23:28:23.607Z"
+  },
+  {
+    "id": "117",
+    "name": "labubu nation",
+    "myth": "inside a pot hole on 23rd street, there’s lives a fully functioning civilization of labubus",
+    "timestamp": "2025-06-30T00:58:34.327Z"
+  },
+  {
+    "id": "119",
+    "name": "The Beacon",
+    "myth": "It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther.... And one fine morning-- So we beat on, boats against the current, borne back ceaselessly into the past.",
+    "timestamp": "2025-06-29T00:57:26.806Z"
+  },
+  {
+    "id": "121",
+    "name": "Percius Jackson",
+    "myth": "The Percy Jackson series ",
+    "timestamp": "2025-06-30T00:25:07.787Z"
+  },
+  {
+    "id": "125",
+    "name": "Marty 2",
+    "myth": "heard of Marty? love Marty? well now we got Marty 2!",
+    "timestamp": "2025-06-30T00:36:12.596Z"
+  },
+  {
+    "id": "127",
+    "name": "baboo",
+    "myth": "it’s only visible to wolves during a full moon o.O",
+    "timestamp": "2025-06-29T23:56:17.151Z"
+  },
+  {
+    "id": "129",
+    "name": "joyboy",
+    "myth": "Legend has it joyboy freed the slaves 1000 years ago and became a sungod. Then he disappeared.",
+    "timestamp": "2025-06-29T22:42:44.886Z"
+  },
+  {
+    "id": "133",
+    "name": "shrimp",
+    "myth": "there was once a shrimp that drowned",
+    "timestamp": "2025-06-30T00:10:25.029Z"
+  },
+  {
+    "id": "135",
+    "name": "Quarticus",
+    "myth": "Only visible once a year, when seen your wishes may come true ",
+    "timestamp": "2025-06-29T23:42:08.629Z"
+  },
+  {
+    "id": "137",
+    "name": "bounce house",
+    "myth": "once upon a time there was a house that bounced",
+    "timestamp": "2025-06-29T00:37:33.278Z"
+  },
+  {
+    "id": "139",
+    "name": "Manta Ray",
+    "myth": "Avenged the death of Steve Irwin ",
+    "timestamp": "2025-06-29T23:34:13.286Z"
+  },
+  {
+    "id": "141",
+    "name": "constacreate",
+    "myth": "the god of uncreative names",
+    "timestamp": "2025-06-30T00:10:10.788Z"
+  },
+  {
+    "id": "143",
+    "name": "kiwus",
+    "myth": "how kiwis evolved to be furry ",
+    "timestamp": "2025-06-30T00:56:56.800Z"
+  },
+  {
+    "id": "145",
+    "name": "Joe M.",
+    "myth": "A tired joke as old as time.",
+    "timestamp": "2025-06-29T23:41:50.648Z"
+  },
+  {
+    "id": "147",
+    "name": "Kurt",
+    "myth": "The legend of Kurt makes it so that you can engorge large burgers at whim with minimal effort. ",
+    "timestamp": "2025-06-29T22:17:50.160Z"
+  },
+  {
+    "id": "149",
+    "name": "the wild boar ",
+    "myth": "the boar dropped its tusks off the edge of the moon, and crossed the sky to find them ",
+    "timestamp": "2025-06-30T00:59:25.105Z"
+  },
+  {
+    "id": "151",
+    "name": "Unnamed",
+    "myth": "The poor fool who erected this constellation, alas, failed to name it. The world will never know where it came from or where it will go.",
+    "timestamp": "2025-06-29T23:30:28.395Z"
+  },
+  {
+    "id": "153",
+    "name": "The Big Six",
+    "myth": "Scared of seven and mourning nine “7 8 9”",
+    "timestamp": "2025-06-30T00:04:01.289Z"
+  },
+  {
+    "id": "155",
+    "name": "Shag (cormorant)",
+    "myth": "The shag is half submerged in the black sky ocean, it is searching for fish (other stars)",
+    "timestamp": "2025-06-29T23:18:16.313Z"
+  },
+  {
+    "id": "157",
+    "name": "whichlight",
+    "myth": "a curious space that invites wonder 🌀",
+    "timestamp": "2025-06-30T00:25:38.353Z"
+  },
+  {
+    "id": "521",
+    "name": "Torque",
+    "myth": "Torque says hi",
+    "timestamp": "2025-06-29T03:12:11.365Z"
+  },
+  {
+    "id": "deleted_3_1596bbdc",
+    "name": "cutie",
+    "myth": "torq can't stop being one",
+    "timestamp": "2025-06-28T09:50:05.598Z"
+  },
+  {
+    "id": "deleted_7_c8fb86bb",
+    "name": "TEST",
+    "myth": "no rly...",
+    "timestamp": "2025-06-28T09:52:40.946Z"
+  },
+  {
+    "id": "deleted_75_39a5b1ae",
+    "name": "Broken Hourglass",
+    "myth": "You’ve lost track of time, but who the hell cares",
+    "timestamp": "2025-06-28T23:27:40.443Z"
+  },
+  {
+    "id": "deleted_147_628323c4",
+    "name": "Katie",
+    "myth": "Katie",
+    "timestamp": "2025-06-29T00:11:36.555Z"
+  },
+  {
+    "id": "deleted_145_5baf526d",
+    "name": "Tess",
+    "myth": "caffeinated drunk and hungry inside a constellation for some reason",
+    "timestamp": "2025-06-29T00:13:54.346Z"
+  },
+  {
+    "id": "deleted_67_280d7503",
+    "name": "Egg carton ",
+    "myth": "Way back in 2025 eggs were so expensive all you could do was look at the stars and reminisce about eggs and better days ",
+    "timestamp": "2025-06-28T22:43:30.366Z"
+  },
+  {
+    "id": "deleted_5_a30c9b91",
+    "name": "aissatou",
+    "myth": "only recently uncovered as it had been lost to light pollution for centuries. god of sewing/sowing",
+    "timestamp": "2025-06-29T00:27:59.304Z"
+  },
+  {
+    "id": "deleted_53_c7c04dad",
+    "name": "Mouse flowers",
+    "myth": "Once there was a little mouse. She was born in a cozy little nook in the wall of a crawlspace with her brothers and sisters. As spring came, she and her siblings peeked their little noses out of a crack in the wall and set out on their own to explore. It was a beautiful world, scented with grass and lavender, alive with ants and ladybugs. The little mouse spent the whole summer roaming across every inch of the yard, sampling every scent and texture. It was a beautiful life. She watched every afternoon as the sun dipped a little lower in the sky, it's hue more golden by the day, until a chill started to settle into the edges of even the brightest moments. She new it was time to start building her winter nest, but something held her back. She wanted to find a seed from the most perfect flower to leave behind, so that next year's little mouselings could peek their noses out into a world just as beautiful as the one she's been in awe of that spring. But when she looked around, there were no more flowers in bloom. She sniffed the ground for days, but still found nothing. One morning, as an icy foggy streamed through the birch overhead, her frozen paws came across something unexpected: a tiny brown seed. She didn't know what is was. A fruit tree? A weed? But she held it in her paw, and remembered every beautiful thing she had touched and buried it in the ground. It was a long cold winter. Most wild mice don't live longer than 8 or 9 months, and our little mouse was not an exception. But the next spring, there was a new white flower, with tiny petals, brilliant as sunlit fog. Every autumn it dies, scattering new seeds to the ground. But in the winter, if you look up into the night sky, you can see it blooming, bright and small and beautiful in a vast dark ocean.",
+    "timestamp": "2025-06-28T23:56:55.038Z"
+  },
+  {
+    "id": "deleted_155_ec4f2858",
+    "name": "The Missing Piece",
+    "myth": "A Shel Silverstein book that’s fitting for all stages of life. Read it!",
+    "timestamp": "2025-06-29T00:11:23.232Z"
+  },
+  {
+    "id": "deleted_91_339e7dc6",
+    "name": "Bun",
+    "myth": "A small yet mighty bunny once jumped across the earth, and every hop where it's butt dropped became a lake, and every scratch with its back legs left hairs that became a forest.",
+    "timestamp": "2025-06-29T01:02:28.057Z"
+  },
+  {
+    "id": "deleted_43_bb48b28d",
+    "name": "Shell",
+    "myth": "The shell is the messenger of the oracle. Historical Chinese uses it to speak to ancestors. Modern computer uses it to talk to AI.",
+    "timestamp": "2025-06-29T00:08:11.313Z"
+  },
+  {
+    "id": "deleted_115_4a98b533",
+    "name": "steven universe",
+    "myth": "manifested by very passionate baby queer fourteen year olds",
+    "timestamp": "2025-06-28T22:18:43.343Z"
+  },
+  {
+    "id": "deleted_93_2ca6e61b",
+    "name": "Barque",
+    "myth": "The barque is the cross between a tall ship and a wolf",
+    "timestamp": "2025-06-28T23:03:11.470Z"
+  },
+  {
+    "id": "deleted_77_457e935e",
+    "name": "Diagon Alley",
+    "myth": "A wand, an owl, and a goblin went for a quick drink ",
+    "timestamp": "2025-06-29T00:17:09.801Z"
+  },
+  {
+    "id": "deleted_35_80e82937",
+    "name": "Australopithecus",
+    "myth": "This constellation is named in honor of the first proto-humans to make it to space ",
+    "timestamp": "2025-06-28T23:37:36.313Z"
+  },
+  {
+    "id": "deleted_129_1519c03d",
+    "name": "Me",
+    "myth": "Beginning",
+    "timestamp": "2025-06-29T00:25:36.264Z"
+  },
+  {
+    "id": "deleted_27_36cf97db",
+    "name": "Life alert ",
+    "myth": "Help! I've fallen and I can't get up",
+    "timestamp": "2025-06-29T00:59:56.117Z"
+  },
+  {
+    "id": "deleted_39_06a189ea",
+    "name": "Minor Shrug",
+    "myth": "When the heavens were created the gods said… eh good enough",
+    "timestamp": "2025-06-28T22:25:52.661Z"
+  },
+  {
+    "id": "deleted_69_6a53afaf",
+    "name": "Fate",
+    "myth": "The golden thread that connects two souls deeply",
+    "timestamp": "2025-06-28T23:38:08.397Z"
+  },
+  {
+    "id": "deleted_71_1c055b59",
+    "name": "Shacurryous",
+    "myth": "This constellation arrives once every few years. Reports of it being spotted signal a great year for Stephen Curry & the Golden State Warriors. There was a spotting last night, is it time to bring the banner home? ",
+    "timestamp": "2025-06-29T00:52:36.786Z"
+  },
+  {
+    "id": "deleted_97_259b4c78",
+    "name": "Rearing Snake",
+    "myth": "The snake has a small tail and a big head. When it gets angry, it rears up and stretches out its jaw to make its head look even bigger. The folds of its skin form the colorful clouds of the sunset. When the sunset is particularly good, they say, “the rearing snake is angered today”. ",
+    "timestamp": "2025-06-28T23:27:10.102Z"
+  },
+  {
+    "id": "deleted_135_daed714b",
+    "name": "Sylvie & Christian",
+    "myth": "Lake Tahoe is the second deepest lake in the US. But what really happens at a 1600 feet depth? Legend has it, only on the winter solstice, the Tahoe octopod emerges from the water and jumps into the sky to enjoy the longest night of the year. ",
+    "timestamp": "2025-06-29T00:38:31.249Z"
+  },
+  {
+    "id": "deleted_51_b6714162",
+    "name": "Frog Hat",
+    "myth": "Once upon a time there was a frog, then it turned into a hat. But when it finally came to the end of its life, its spirit lived on in this constellation",
+    "timestamp": "2025-06-28T23:22:19.216Z"
+  },
+  {
+    "id": "deleted_21_b8fea67b",
+    "name": "Infinibridge",
+    "myth": "The bridge wraps around to itself. The lesson being something akin to -- the grass isn't greener on the other side because the other side is the same side you're on. ",
+    "timestamp": "2025-06-28T23:08:38.372Z"
+  },
+  {
+    "id": "deleted_83_2e903624",
+    "name": "Chiisai",
+    "myth": "She ate so much food that she rolled into a snowball of other dogs!",
+    "timestamp": "2025-06-29T00:57:59.368Z"
+  },
+  {
+    "id": "deleted_61_03bec3a9",
+    "name": "Gloworm",
+    "myth": "A single-celled gloworm, bringer of light on the first day, after creating God the day before",
+    "timestamp": "2025-06-28T22:43:39.670Z"
+  },
+  {
+    "id": "deleted_29_59f69156",
+    "name": "Tanuqi",
+    "myth": "A raccoon dog goddess that shape shifts and tricks people ",
+    "timestamp": "2025-06-28T23:53:43.182Z"
+  },
+  {
+    "id": "deleted_131_b5137eb2",
+    "name": "Alex",
+    "myth": "he really wanted to be special ",
+    "timestamp": "2025-06-28T23:59:27.976Z"
+  },
+  {
+    "id": "deleted_127_5ffeedd3",
+    "name": "Condor sky",
+    "myth": "When the world was being made there was no sky. T$4 condor spread its wings and lifted the sky into the heavens to the world could exist. ",
+    "timestamp": "2025-06-28T22:52:43.351Z"
+  },
+  {
+    "id": "deleted_41_d74d94ce",
+    "name": "Superstar",
+    "myth": "Sometimes we transcend and become more than the sum of our parts. That's what happened to this lil group of star-pals ✨️",
+    "timestamp": "2025-06-28T22:52:52.709Z"
+  },
+  {
+    "id": "deleted_73_e98c67d1",
+    "name": "Hubris",
+    "myth": "Hubris was a mortal who bet that they could be even more insufferable than the goddess Athena, and was cursed for their sins",
+    "timestamp": "2025-06-29T00:05:31.816Z"
+  },
+  {
+    "id": "deleted_63_7c9a1baf",
+    "name": "The High Heel",
+    "myth": "One of the gods lost their shoe at the ball - now it lives here. ",
+    "timestamp": "2025-06-28T23:30:35.788Z"
+  },
+  {
+    "id": "deleted_75_007d8638",
+    "name": "Unicorn",
+    "myth": "Unicorn eats ice cream and frog legs at food festival, and we were so proud that we honor her in the night sky",
+    "timestamp": "2025-06-29T00:45:41.631Z"
+  },
+  {
+    "id": "deleted_81_6f0cf67b",
+    "name": "Ospreon ",
+    "myth": "A giant Osprey caught a fish but was attacked by a giant sea gull and dropped it",
+    "timestamp": "2025-06-29T00:36:44.173Z"
+  },
+  {
+    "id": "deleted_151_86b80365",
+    "name": "The Cosmic Snack",
+    "myth": "In a galaxy not so far away, there lived a group of intergalactic foodies known as the Snackonauts. They traveled the universe in search of the ultimate snack, and their leader, Captain Cheesy, was obsessed with finding the perfect pizza.\n\nOne day, while exploring a distant planet, Captain Cheesy and his crew stumbled upon a legendary pizza known as the \"Slice of Destiny.\" It was said that whoever took a bite would gain the power to create the most delicious snacks in the universe. However, the pizza was guarded by the fearsome Lord Veggie, a tyrant who believed that only healthy snacks should exist.\n\nDetermined to claim the Slice of Destiny, Captain Cheesy challenged Lord Veggie to a cook-off. The two faced off in an epic battle of culinary skills, with the fate of snacks hanging in the balance. As they cooked, the Snackonauts cheered, and the aroma of deliciousness filled the air.\n\nIn a twist of fate, Captain Cheesy accidentally spilled a secret ingredient—cosmic cheese—into his pizza. The pizza erupted in a burst of flavor, dazzling everyone present. Lord Veggie, unable to resist the mouthwatering aroma, conceded defeat and declared that all snacks, healthy or not, deserved a place in the universe.\n\nTo commemorate this legendary cook-off, the Snackonauts created The Cosmic Snack constellation, forever reminding everyone that life is too short to skip dessert. Now, whenever you gaze at the night sky and see the pizza slice, it’s a call to gather your friends, grab some snacks, and celebrate the joy of good food and laughter!",
+    "timestamp": "2025-06-29T00:25:39.796Z"
+  },
+  {
+    "id": "deleted_59_7ae4d004",
+    "name": "catboy",
+    "myth": "The ears represent the cat ears of our favorite catboys",
+    "timestamp": "2025-06-29T00:38:46.028Z"
+  },
+  {
+    "id": "deleted_15_c968c71c",
+    "name": "Pizzian",
+    "myth": "Originates from the 32nd century when people uncovered relics of frozen pizza and looked up in the sky and saw a slice of pizza",
+    "timestamp": "2025-06-28T22:57:12.518Z"
+  },
+  {
+    "id": "deleted_87_79939623",
+    "name": "Meowstellation ",
+    "myth": "cats rule the universe ",
+    "timestamp": "2025-06-29T00:26:47.801Z"
+  },
+  {
+    "id": "deleted_49_5d9dc6e9",
+    "name": "Multi dimensions pyramid",
+    "myth": "A pyramid stuck between several dimensions",
+    "timestamp": "2025-06-28T23:40:59.069Z"
+  },
+  {
+    "id": "deleted_57_c2c8dc14",
+    "name": "The Perfect Circle",
+    "myth": "While the circle’s shape isn’t the roundest and doesn’t obey the analytical expressions, generations have followed the guidance of this constellation to seek the betterment of humanity. All praise the circle for it and its mathematical glory have arrived. ",
+    "timestamp": "2025-06-28T23:18:31.627Z"
+  },
+  {
+    "id": "deleted_37_0b2adb62",
+    "name": "Highome ",
+    "myth": "You always have a home to return to in the sky ",
+    "timestamp": "2025-06-28T22:53:14.476Z"
+  },
+  {
+    "id": "deleted_51_5da6ef79",
+    "name": "Sophiaqin",
+    "myth": "😩",
+    "timestamp": "2025-06-29T23:17:59.282Z"
   }
-}
+]
